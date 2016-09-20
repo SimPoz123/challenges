@@ -54,4 +54,20 @@ describe 'challenges' do
 
   end
 
+  describe 'count_hi' do
+
+    it "works when hi is its own word" do
+      count_hi("abc hi ho").must_equal(1)
+    end
+
+    it 'works when hi is part of the word' do
+      count_hi("ABChi hi").must_equal(2)
+    end
+
+    it "works when multiple his are one word" do
+      count_hi("hihi").must_equal(2)
+    end
+
+  end
+
 end
