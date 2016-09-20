@@ -1,6 +1,5 @@
 def everywhere?(list, value)
   pair = 1
-  everywhere = true
 
   list.each do |n|
 
@@ -24,4 +23,8 @@ def sum2(list)
   end
 
   return(0)
+end
+
+def has_bad?(str)
+  return str[0..2] == "bad" || str[1..3] == "bad"
 end

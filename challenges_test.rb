@@ -37,4 +37,21 @@ describe 'challenges' do
 
   end
 
+  describe 'has_bad?' do
+
+    it 'is true when bad is at the beginning' do
+      has_bad?("badxx").must_equal(true)
+    end
+
+    it 'is true when bad is second' do
+      has_bad?("xbadxx").must_equal(true)
+    end
+
+    it 'is false when bad is not first or second' do
+      has_bad?("xxbadxx").must_equal(false)
+      has_bad?("simon").must_equal(false)
+    end
+
+  end
+
 end
