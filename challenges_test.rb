@@ -152,4 +152,17 @@ describe 'challenges' do
 
   end
 
+  describe 'cat_dog?' do
+
+    it 'is true when same amount of cats as dogs' do
+      cat_dog?("catdog").must_equal(true)
+      cat_dog?("1cat1cadodog").must_equal(true)
+    end
+
+    it 'is false when not the same amount of cats as dogs' do
+      cat_dog?("catcat").must_equal(false)
+    end
+
+  end
+
 end

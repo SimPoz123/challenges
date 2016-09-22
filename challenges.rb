@@ -102,3 +102,22 @@ def last_two(str)
     str[0..-3] + str[-1] + str[-2]
   end
 end
+
+def cat_dog?(str)
+  cats = 0
+  dogs = 0
+  a = "cat"
+  b = "dog"
+
+  while a != nil
+    a = str.delete! "cat"
+    cats += 1
+  end
+
+  while b != nil
+    b = str.delete! "dog"
+    dogs += 1
+  end
+
+  return cats == dogs
+end
