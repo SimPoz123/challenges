@@ -86,3 +86,11 @@ def sum67(list)
 
   return(sum)
 end
+
+def left2(str)
+  if str.length == 2
+    return str
+  else
+    return str[2..-1] + str[0..1]
+  end
+end

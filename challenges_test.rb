@@ -122,4 +122,18 @@ describe 'challenges' do
 
   end
 
+  describe 'left2' do
+
+    it "rotates a string left 2" do
+      left2("Ruby").must_equal("byRu")
+      left2("Hello").must_equal("lloHe")
+
+    end
+
+    it "does nothing if only two letters" do
+      left2("Hi").must_equal("Hi")
+    end
+
+  end
+
 end
