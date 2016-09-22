@@ -121,3 +121,20 @@ def cat_dog?(str)
 
   return cats == dogs
 end
+
+def has22?(list)
+  two = false
+
+  list.each do |n|
+    if n == 2
+      if two
+        return true
+      end
+      two = true
+    else
+      two = false
+    end
+  end
+
+  false
+end

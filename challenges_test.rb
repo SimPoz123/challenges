@@ -165,4 +165,20 @@ describe 'challenges' do
 
   end
 
+  describe 'has22?' do
+
+    it "is true when two 2's are next to each other" do
+      has22?([1, 2, 2]).must_equal(true)
+    end
+
+    it "is false when there are multiple 2's but they are not next to each other" do
+      has22?([1, 2, 1, 2]).must_equal(false)
+    end
+
+    it "is false when there are not multiple 2's" do
+      has22?([1, 2, 1]).must_equal(false)
+    end
+
+  end
+
 end
