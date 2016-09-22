@@ -138,3 +138,7 @@ def has22?(list)
 
   false
 end
+
+def same_first_last(list)
+  return list[0] == list [-1]
+end

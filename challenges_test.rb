@@ -181,4 +181,17 @@ describe 'challenges' do
 
   end
 
+  describe 'same_first_last' do
+
+    it "is true when the first and last are the same" do
+      same_first_last([1, 2, 1]).must_equal(true)
+      same_first_last([1, 2, 3, 1]).must_equal(true)
+    end
+
+    it "is false when first and last are different" do
+      same_first_last([1, 2, 3]).must_equal(false)
+    end
+
+  end
+
 end
