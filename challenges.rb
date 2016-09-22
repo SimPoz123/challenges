@@ -32,8 +32,6 @@ end
 def count_hi(str)
   list = str.split(//)
 
-  print "#{list}"
-
   his = 0
   is_hi = false
 
@@ -54,4 +52,37 @@ def count_hi(str)
 
   return(his)
 
+end
+
+def common_end?(a, b)
+  return a[0] == b[0] || a[-1] == b[-1]
+end
+
+def count_evens(list)
+  evens = 0
+
+  list.each do |n|
+    if n % 2 == 0
+      evens += 1
+    end
+  end
+
+  return evens
+end
+
+def sum67(list)
+  sum = 0
+  add = true
+
+  list.each do |n|
+    if n == 6
+      add = false
+    elsif n == 7 && !add
+      add = true
+    elsif add
+      sum += n
+    end
+  end
+
+  return(sum)
 end

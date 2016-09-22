@@ -70,4 +70,56 @@ describe 'challenges' do
 
   end
 
+  describe 'common_end?' do
+
+    it "is true when common beginning" do
+      common_end?([1, 2, 3], [1, 4]).must_equal(true)
+    end
+
+    it "is true when common end" do
+      common_end?([1, 2, 3], [7, 3]).must_equal(true)
+    end
+
+    it 'is true when both common beginning and common end' do
+      common_end?([1, 2, 3], [1, 3]).must_equal(true)
+    end
+
+    it "is false when not common beginning or end" do
+      common_end?([1, 2, 3], [7, 3, 2]).must_equal(false)
+    end
+
+  end
+
+  describe 'count_evens' do
+
+    it "counts the evens" do
+      count_evens([2, 1, 2, 3, 4]).must_equal(3)
+    end
+
+    it 'counts 0 as an even' do
+      count_evens([2, 2, 0]).must_equal(3)
+    end
+
+    it 'returns 0 if there are no evens' do
+      count_evens([1, 3, 5]).must_equal(0)
+    end
+
+  end
+
+  describe 'sum67' do
+
+    it "adds with no 6 or 7" do
+      sum67([1, 2, 2]).must_equal(5)
+    end
+
+    it 'does not add numbers between 6 and 7' do
+      sum67([1, 2, 2, 6, 99, 99, 7]).must_equal(5)
+    end
+
+    it 'does not add six or seven when next to each other' do
+      sum67([1, 1, 6, 7, 2]).must_equal(4)
+    end
+
+  end
+
 end
