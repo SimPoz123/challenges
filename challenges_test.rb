@@ -136,4 +136,20 @@ describe 'challenges' do
 
   end
 
+  describe 'last_two' do
+
+    it "switches the last two" do
+      last_two("coding").must_equal("codign")
+    end
+
+    it 'works with 3 letters' do
+      last_two("cat").must_equal("cta")
+    end
+
+    it 'works with 2 letters' do
+      last_two("ab").must_equal("ba")
+    end
+
+  end
+
 end

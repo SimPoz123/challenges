@@ -94,3 +94,11 @@ def left2(str)
     return str[2..-1] + str[0..1]
   end
 end
+
+def last_two(str)
+  if str.length == 2
+    str[1] + str[0]
+  else
+    str[0..-3] + str[-1] + str[-2]
+  end
+end
